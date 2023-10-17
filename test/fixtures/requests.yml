@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item: MyString
+  status: MyString
+  solicitationDate: 2023-09-18
+  idSupplie: 1
+
+two:
+  item: MyString
+  status: MyString
+  solicitationDate: 2023-09-18
+  idSupplie: 1

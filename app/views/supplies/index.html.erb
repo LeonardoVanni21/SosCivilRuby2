@@ -1,0 +1,34 @@
+<%= render 'shared/menu' %>
+<p id="notice"><%= notice %></p>
+
+<h1>Supplies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Details</th>
+      <th>Stock</th>
+      <th>Unity of measure</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @supplies.each do |supply| %>
+      <tr>
+        <td><%= supply.name %></td>
+        <td><%= supply.details %></td>
+        <td><%= supply.stock %></td>
+        <td><%= supply.unity_of_measure %></td>
+        <td><%= link_to 'Show', supply %></td>
+        <td><%= link_to 'Edit', edit_supply_path(supply) %></td>
+        <td><%= link_to 'Destroy', supply, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Supply', new_supply_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @occurence.status %>
+</p>
+
+<p>
+  <strong>Deliverydate:</strong>
+  <%= @occurence.deliveryDate %>
+</p>
+
+<p>
+  <strong>Idrequest:</strong>
+  <%= @occurence.idRequest %>
+</p>
+
+<%= link_to 'Edit', edit_occurence_path(@occurence) %> |
+<%= link_to 'Back', occurences_path %>

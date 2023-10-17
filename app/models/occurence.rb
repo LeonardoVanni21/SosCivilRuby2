@@ -1,0 +1,2 @@
+class Occurence < ApplicationRecord
+end

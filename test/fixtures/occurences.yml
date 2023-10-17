@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: MyString
+  deliveryDate: 2023-09-18
+  idRequest: 1
+
+two:
+  status: MyString
+  deliveryDate: 2023-09-18
+  idRequest: 1
