@@ -27,8 +27,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :idSupplie %>
-    <%= form.number_field :idSupplie %>
+    <%= form.label :supplies_id %>
+    <%= form.collection_select(:supplies_id, Supply.all, :id, :name) %>
   </div>
 
   <div class="field">

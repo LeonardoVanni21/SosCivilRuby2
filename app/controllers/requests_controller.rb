@@ -1,5 +1,6 @@
 class RequestsController < ApplicationController
   before_action :set_request, only: %i[ show edit update destroy ]
+  before_action :set_supply_options, only: %i[ new edit create update ]
 
   # GET /requests or /requests.json
   def index
@@ -65,6 +66,10 @@ class RequestsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def request_params
-      params.require(:request).permit(:item, :status, :created_at, :idSupplie, :quantity)
+      params.require(:request).permit(:item, :status, :created_at, :supplies_id, :quantity)
+    end
+
+    def set_supply_options
+      @supply_options = Supply.all.pluck(:name, :id)
     end
 end

@@ -6,13 +6,13 @@
 </p>
 
 <p>
-  <strong>Deliverydate:</strong>
+    <strong>Deliverydate:</strong>
   <%= @occurence.deliveryDate %>
 </p>
 
 <p>
-  <strong>Idrequest:</strong>
-  <%= @occurence.idRequest %>
+  <strong>Request:</strong>
+  <%= @occurence.request.item %>
 </p>
 
 <%= link_to 'Edit', edit_occurence_path(@occurence) %> |

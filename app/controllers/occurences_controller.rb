@@ -1,5 +1,6 @@
 class OccurencesController < ApplicationController
   before_action :set_occurence, only: %i[ show edit update destroy ]
+  before_action :set_request_options, only: %i[ new edit create update ]
 
   # GET /occurences or /occurences.json
   def index
@@ -65,6 +66,10 @@ class OccurencesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def occurence_params
-      params.require(:occurence).permit(:status, :deliveryDate, :idRequest)
+      params.require(:occurence).permit(:status, :deliveryDate, :requests_id)
+    end
+
+    def set_request_options
+      @request_options = Request.all.pluck(:item, :id)
     end
 end

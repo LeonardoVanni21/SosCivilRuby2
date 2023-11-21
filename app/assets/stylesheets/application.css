@@ -15,3 +15,125 @@
  */
 
 @import 'menu';
+@import url('https://fonts.googleapis.com/css?family=Kdam+Thmor+Pro');
+
+body {
+    display: table;
+    width: 100%;
+  }
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  table {
+    background: #fff;
+  }
+  table,
+  thead,
+  tbody,
+  tfoot,
+  tr,
+  td,
+  th {
+    text-align: center;
+    margin: auto;
+    border: 1px solid #dedede;
+    padding: 1rem;
+    width: 50%;
+  }
+  .table {
+    display: table;
+    width: 50%;
+  }
+  .tr {
+    display: table-row;
+  }
+  .thead {
+    display: table-header-group;
+  }
+  .tbody {
+    display: table-row-group;
+  }
+  .tfoot {
+    display: table-footer-group;
+  }
+  .col {
+    display: table-column;
+  }
+  .colgroup {
+    display: table-column-group;
+  }
+  .td,
+  .th {
+    display: table-cell;
+    width: 50%;
+  }
+  .caption {
+    display: table-caption;
+  }
+  
+  .table,
+  .thead,
+  .tbody,
+  .tfoot,
+  .tr,
+  .td,
+  .th {
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+  }
+  .table {
+    background: #fff;
+    margin: auto;
+    border: none;
+    padding: 0;
+    margin-bottom: 5rem;
+  }
+  
+  .th {
+    font-weight: 700;
+    border: 1px solid #dedede;
+    &:nth-child(odd) {
+      border-right: none;
+    }
+  }
+  .td {
+    font-weight: 300;
+    border: 1px solid #dedede;
+    border-top: none;
+    &:nth-child(odd) {
+      border-right: none;
+    }
+  }
+  a:hover {
+    background-color: #d8791f;
+  }
+  * {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+  }
+
+input[type="text"], input[type="number"]{
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+textarea {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 90%;
+    background-color: #d8791f;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

@@ -4,7 +4,6 @@ class CreateRequests < ActiveRecord::Migration[5.2]
       t.string :item
       t.string :status
       t.date :solicitationDate
-      t.integer :idSupplie
 
       t.timestamps
     end

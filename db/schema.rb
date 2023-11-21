@@ -10,23 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_09_25_224354) do
+ActiveRecord::Schema.define(version: 2023_11_20_222542) do
 
   create_table "occurences", force: :cascade do |t|
     t.string "status"
     t.date "deliveryDate"
-    t.integer "idRequest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "requests_id"
+    t.index ["requests_id"], name: "index_occurences_on_requests_id"
   end
 
   create_table "requests", force: :cascade do |t|
     t.string "item"
     t.string "status"
-    t.integer "idSupplie"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "quantity"
+    t.integer "supplies_id"
+    t.index ["supplies_id"], name: "index_requests_on_supplies_id"
   end
 
   create_table "supplies", force: :cascade do |t|
