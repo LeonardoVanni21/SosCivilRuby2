@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2023_11_20_222542) do
     t.date "deliveryDate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "requests_id"
-    t.index ["requests_id"], name: "index_occurences_on_requests_id"
+    t.integer "request_id"
+    t.index ["request_id"], name: "index_occurences_on_request_id"
   end
 
   create_table "requests", force: :cascade do |t|
@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 2023_11_20_222542) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "quantity"
-    t.integer "supplies_id"
-    t.index ["supplies_id"], name: "index_requests_on_supplies_id"
+    t.integer "supply_id"
+    t.index ["supply_id"], name: "index_requests_on_supply_id"
   end
 
   create_table "supplies", force: :cascade do |t|

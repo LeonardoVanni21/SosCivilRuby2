@@ -1,7 +1,7 @@
 <%= render 'shared/menu' %>
 <p id="notice"><%= notice %></p>
 
-<h1>Occurences</h1>
+<h1>Entregas</h1>
 
 <table>
   <thead>
@@ -18,12 +18,10 @@
       <tr>
         <td><%= occurence.status %></td>
         <td><%= occurence.deliveryDate %></td>
-        <% occurence.requests.each do |request| %>
-      <td><%= request.details %></td>
-    <% end %>
-        <td><%= link_to 'Show', occurence %></td>
-        <td><%= link_to 'Edit', edit_occurence_path(occurence) %></td>
-        <td><%= link_to 'Destroy', occurence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= occurence.request&.item || '' %></td>
+        <td><%= link_to 'Mostrar', occurence %></td>
+        <td><%= link_to 'Editar', edit_occurence_path(occurence) %></td>
+        <td><%= link_to 'Deletar', occurence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -31,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Occurence', new_occurence_path %>
+<%= link_to 'Nova Entrega', new_occurence_path %>

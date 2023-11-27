@@ -66,7 +66,7 @@ class RequestsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def request_params
-      params.require(:request).permit(:item, :status, :created_at, :supplies_id, :quantity)
+      params.require(:request).permit(:item, :status, :created_at, :supply_id, :quantity)
     end
 
     def set_supply_options

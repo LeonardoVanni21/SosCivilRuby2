@@ -66,7 +66,7 @@ class OccurencesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def occurence_params
-      params.require(:occurence).permit(:status, :deliveryDate, :requests_id)
+      params.require(:occurence).permit(:status, :deliveryDate, :request_id)
     end
 
     def set_request_options

@@ -12,8 +12,8 @@
 
 <p>
   <strong>Request:</strong>
-  <%= @occurence.request.item %>
+  <%= @occurence.request&.item || '' %>
 </p>
 
-<%= link_to 'Edit', edit_occurence_path(@occurence) %> |
-<%= link_to 'Back', occurences_path %>
+<%= link_to 'Editar', edit_occurence_path(@occurence) %> |
+<%= link_to 'Voltar', occurences_path %>

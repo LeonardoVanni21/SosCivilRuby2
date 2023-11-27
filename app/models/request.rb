@@ -1,4 +1,4 @@
 class Request < ApplicationRecord
-    has_many :occurences
+    has_one :occurences
     belongs_to :supply
 end
