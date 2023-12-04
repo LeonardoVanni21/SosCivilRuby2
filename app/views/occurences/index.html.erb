@@ -17,7 +17,7 @@
     <% @occurences.each do |occurence| %>
       <tr>
         <td><%= occurence.status %></td>
-        <td><%= occurence.deliveryDate %></td>
+        <td><%= occurence.deliveryDate.strftime('%d/%m/%Y') %></td>
         <td><%= occurence.request&.item || '' %></td>
         <td><%= link_to 'Mostrar', occurence %></td>
         <td><%= link_to 'Editar', edit_occurence_path(occurence) %></td>

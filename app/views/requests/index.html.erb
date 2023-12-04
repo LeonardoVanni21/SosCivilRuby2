@@ -20,7 +20,7 @@
       <tr>
         <td><%= request.item %></td>
         <td><%= request.status %></td>
-        <td><%= request.created_at %></td>
+        <td><%= request.created_at.strftime('%d/%m/%Y') %></td>
         <td><%= request.supply&.name || '' %></td>
         <td><%= request.quantity %></td>
         <td><%= link_to 'Mostrar', request %></td>
